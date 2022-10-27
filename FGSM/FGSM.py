@@ -41,7 +41,7 @@ class Net(nn.Module):
 
 # 声明 MNIST 测试数据集何数据加载
 test_loader = torch.utils.data.DataLoader(
-    datasets.MNIST('../data_row', train=False, download=True, transform=transforms.Compose([
+    datasets.MNIST('./data_row', train=False, download=True, transform=transforms.Compose([
         transforms.ToTensor(),
     ])),
     batch_size=1, shuffle=True)
@@ -146,14 +146,14 @@ for eps in epsilons:
     accuracies.append(acc)
     examples.append(ex)
 
-# plt.figure(figsize=(5, 5))
-# plt.plot(epsilons, accuracies, "*-")
-# plt.yticks(np.arange(0, 1.1, step=0.1))
-# plt.xticks(np.arange(0, .35, step=0.05))
-# plt.title("Accuracy vs Epsilon")
-# plt.xlabel("Epsilon")
-# plt.ylabel("Accuracy")
-# plt.show()
+plt.figure(figsize=(5, 5))
+plt.plot(epsilons, accuracies, "*-")
+plt.yticks(np.arange(0, 1.1, step=0.1))
+plt.xticks(np.arange(0, .35, step=0.05))
+plt.title("Accuracy vs Epsilon")
+plt.xlabel("Epsilon")
+plt.ylabel("Accuracy")
+plt.show()
 
 # 在每个epsilon上绘制几个对抗样本的例子
 cnt = 0
