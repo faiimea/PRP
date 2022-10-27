@@ -4,5 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/PGD" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/PGD-pytorch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/square-attack" vcs="Git" />
   </component>
 </project>
